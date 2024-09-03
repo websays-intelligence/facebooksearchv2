@@ -76,7 +76,7 @@ const queryManager = {
   },
   async postQueryResults(queryPack, userPack, results) {
     var articles = results.map(jsonToWebsays)
-    if(queryPack.search.includes('www.instagram.com/p')){
+    if(queryPack.search.includes('www.facebook.com/p')){
       changeProvider(articles);
     }
 

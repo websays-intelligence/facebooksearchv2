@@ -1,6 +1,6 @@
 // process.env.SERVER_WINPUT = 'https://wapi-beta.websays.com/'
 // process.env.REDIS_HOST = 'localhost:6379'
-// The users are not registred in Instagram. We are not using login
+// The users are not registred in facebook. We are not using login
 module.exports = {
   server_winput: process.env.SERVER_WINPUT,
   redis_host: process.env.REDIS_HOST,

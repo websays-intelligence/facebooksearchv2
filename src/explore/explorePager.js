@@ -14,7 +14,7 @@ module.exports = async (search, sinceDate) => {
       if (debug_logs) console.log(`[EXPLORE][START][${dayjs().format('YYYY-MM-DD HH:mm:ss')}] SEARCH: "${search}"`)
       var response = { type: 'ko', msg: 'Parsing problems', data: [] }
       try {
-        if(url.includes('www.instagram.com/p')){ //manual index
+        if(url.includes('www.facebook.com/p')){ //manual index
           response = { type: 'ok', msg: 'Results', data: [url] }
         }else{
           await page.goto(url)

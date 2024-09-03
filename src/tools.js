@@ -5,14 +5,14 @@ const { debug_logs } = require('../config')
 module.exports = {
   urlMake(search) {
     const type = search.includes('#')
-    const manual_index_type = search.includes('www.instagram.com/p')
+    const manual_index_type = search.includes('www.facebook.com/p')
     const parse_search = search.replace(/ /g, '_').replace('#', '').replace('@', '')
     if (type) {
-      return `https://www.instagram.com/explore/tags/${parse_search}/`
+      return `https://www.facebook.com/explore/tags/${parse_search}/`
     } if (manual_index_type){
       return search;
     } else {
-      return `https://www.instagram.com/${parse_search}/`
+      return `https://www.facebook.com/${parse_search}/`
     }
   },
   wait(initRange, endRange, reason) {
@@ -20,7 +20,7 @@ module.exports = {
     if (debug_logs) console.log(`[${dayjs().format('YYYY-MM-DD HH:mm:ss')}][WAIT] msg="wait ${time} seconds: ${reason} "`)
     return new Promise(resolve => setTimeout(resolve, time * 1000))
   },
-  queryToInstagram(queries) {
+  queryTofacebook(queries) {
     const newq = queries
       .map(x => {
         if (x.includes('#') || x.includes('@')) return [ x ]
@@ -46,7 +46,7 @@ module.exports = {
     try {
       const serialized = {
         ID: article.article_id,
-        domain: 'instagram.com',
+        domain: 'facebook.com',
         url: article.article_url,
         mediaURLs: [ article.article_media_url ],
         snippet: article.article_whole_text,

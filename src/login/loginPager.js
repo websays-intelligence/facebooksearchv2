@@ -10,7 +10,7 @@ module.exports = async (browserPack) => {
     try {
       const page = (await browserPack.browser.pages())[0]
       if (debug_logs) console.log(`[LOGIN][START][${dayjs().format('YYYY-MM-DD HH:mm:ss')}]`)
-      await page.goto('https://www.instagram.com/accounts/login/?source=auth_switcher')
+      await page.goto('https://www.facebook.com/accounts/login/?source=auth_switcher')
       const user = browserPack.user
       await wait(5, 2, 'wait to load login')
       try {

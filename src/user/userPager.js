@@ -22,7 +22,7 @@ module.exports = async (username) => {
         console.log(`[GET CACHE USER][OK] msg="user ${username} is in cache"`)
         return userResponse;
       } else {
-        const url = `https://www.instagram.com/${username}/`
+        const url = `https://www.facebook.com/${username}/`
         try {
           var page = await browserPack.browser.newPage()
           var response = await tryPageEvaluation(page, url)

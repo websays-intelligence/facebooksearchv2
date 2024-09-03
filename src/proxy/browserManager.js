@@ -74,7 +74,7 @@ const browserManager = {
     if (browserPack && browserPack.browser) {
         const page = await browserPack.browser.newPage()
         try {
-          await page.goto('https://www.instagram.com')
+          await page.goto('https://www.facebook.com')
           await page.close()
           return true
         } catch (error) {
