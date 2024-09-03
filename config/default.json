@@ -1,0 +1,4 @@
+{
+    "projectId":"wapi-websays",
+    "subscribedTopics":["wapi.manual.communicator.job_runner"]
+}

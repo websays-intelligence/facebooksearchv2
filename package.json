@@ -1,0 +1,35 @@
+{
+  "name": "instagramsearch",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "module": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/websays-intelligence/facebooksearch.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/websays-intelligence/facebooksearch/issues"
+  },
+  "homepage": "https://github.com/websays-intelligence/facebooksearch#readme",
+  "dependencies": {
+    "@google-cloud/pubsub": "^4.1.0",
+    "@google-cloud/storage": "^7.7.0",
+    "axios": "^0.24.0",
+    "cheerio": "^1.0.0-rc.12",
+    "cherio": "^1.0.0-rc.2",
+    "config": "^3.3.9",
+    "dayjs": "^1.8.8",
+    "lodash": "^4.17.21",
+    "promise-limit": "^2.7.0",
+    "proxy-chain": "^0.2.7",
+    "puppeteer": "^21.6.1",
+    "redis": "^3.1.2"
+  }
+}

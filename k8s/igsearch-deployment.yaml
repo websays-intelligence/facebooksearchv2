@@ -1,0 +1,40 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: igsearch-deployment
+spec:
+  selector:
+    matchLabels:
+      app: igsearch-pod
+  template:
+    metadata:
+      labels:
+        app: igsearch-pod
+    spec:
+      containers:
+        - name: igsearch
+          resources:
+            limits:
+              memory: "1.2Gi"
+          image: gcr.io/beta-websays/igsearch:latest
+          env:
+          - name: SERVER_WINPUT
+            valueFrom:
+              configMapKeyRef:
+                name: project-configuration
+                key: backend-url
+          - name: REDIS_HOST
+            valueFrom:
+              configMapKeyRef:
+                name: project-configuration
+                key: redis-cache
+          volumeMounts:
+          - mountPath: /dev/shm
+            name: dshm
+      volumes:
+      - name: dshm
+        emptyDir:
+          medium: Memory
+
+                      
+        
